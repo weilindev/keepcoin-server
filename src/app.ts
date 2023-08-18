@@ -16,4 +16,4 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
 })
 
-app.use('/test', (req, res) => res.send('This is a test'))
+app.use('/api/test', (req, res) => res.send('This is a test'))

@@ -16,5 +16,11 @@ jobs:
     - name: Install dependencies
       run: yarn install --immutable
 
-    # - name: Restart pm2
-    #   run: pm2 restart cryptostat-server
+    - name: import env file
+      run: cp ~/env-files/.keepcoin-dev.env .env
+
+    - name: build
+      run: yarn build
+
+    - name: Restart pm2
+      run: pm2 restart keepcoin-dev-server
