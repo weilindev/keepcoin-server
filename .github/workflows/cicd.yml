@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Install dependencies
-      run: yarn install --immutable && yarn add pm2
+      run: yarn install --immutable
 
     - name: import env file
       run: cp ~/env-files/.keepcoin-dev.env .env
@@ -23,4 +23,4 @@ jobs:
       run: yarn build
 
     - name: Restart pm2
-      run: pm2 restart keepcoin-dev-server
+      run: /home/ubuntu/.nvm/versions/node/v18.17.1/bin/pm2 restart keepcoin-dev-server
